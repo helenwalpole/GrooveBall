@@ -5,32 +5,45 @@
     <meta charset="utf-8">
     <meta name="Groove Ball Scorer" content="A scoring app for the game of Groove Ball">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Germania+One" rel="stylesheet">
     <style>
+    body {
+    	font-family: "Baloo 2", sans-serif;
+    }
+    h3 {
+    	font-size: 5rem;
+    	text-align: center;
+    	margin: 0px;
+    }
     a.button {
         display: inline-block;
-        padding: 0.5em 1.2em;
-        margin: 0 0.1em 0.2em 0;
+        margin: auto 0.1em 0.2em;
         border: 0.16em solid rgba(255, 255, 255, 0);
-        border-radius: 1em;
+        border-radius: 0.3em;
         box-sizing: border-box;
         text-decoration: none;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        color: #FFFFFF;
-        text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+        font-family: "Baloo 2", sans-serif;
+        font-size: 2rem;
         text-align: center;
         transition: all 0.2s;
-        width: 70%;
+        width: 100%;
     }
 
     .player1 a.button {
-    	background-color:#f14e4e;
+    	background-color:#f7a02d;
+    	color: black;
     }
     .player2 a.button {
-    	background-color:#4e9af1
+    	background-color:#c60048;    	
+        color: #FFFFFF;
     }
     a.button.reset {
-    	background-color:#f14ebd;
+    	background-color: #cfcfd1;
+    	color: #8c004b;
+    	font-size: 3rem;
+    	margin: 0.5em 0;
     }
 
     a.button:hover {
@@ -60,7 +73,7 @@
 		<a href="#" class="button">1</a>
 	</div>
 
-	<a href="#" class="button reset">Reset</a>
+	<a href="#" class="button reset">grooveball</a>
 
 	<div class="player2">
 		<a href="#" class="button">1</a>
