@@ -127,6 +127,7 @@ footer span {
 }
 
 /*MEDIA QUERIES*/
+/* not yet tested on small screen devices - HW */
 
 @media only screen and (max-width: 800px) {
   #flexwrapper {
@@ -135,24 +136,9 @@ footer span {
     margin: 0 auto;
   }
 
-  h1.header {
+  h1 {
     font-size: 1.5em;
     padding-top: 0;
-  }
-
-  .box1 {
-    width: 90%;
-    margin: 0.5rem 0 0.5rem 0.85rem;
-  }
-
-  .box2 {
-    width: 90%;
-    margin: 0.5rem 0 0.5rem 0.85rem;
-  }
-
-  .box3 {
-    width: 90%;
-    margin: 0.5rem 0 0.5rem 0.85rem;
   }
 
   footer span {
