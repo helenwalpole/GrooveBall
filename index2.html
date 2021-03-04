@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="Groove Ball Scorer" content="A scoring app for the game of Groove Ball">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    a.button {
+        display: inline-block;
+        padding: 0.5em 1.2em;
+        margin: 0 0.1em 0.2em 0;
+        border: 0.16em solid rgba(255, 255, 255, 0);
+        border-radius: 1em;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        color: #FFFFFF;
+        text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+        text-align: center;
+        transition: all 0.2s;
+        width: 70%;
+    }
+
+    .player1 a.button {
+    	background-color:#f14e4e;
+    }
+    .player2 a.button {
+    	background-color:#4e9af1
+    }
+    a.button.reset {
+    	background-color:#f14ebd;
+    }
+
+    a.button:hover {
+        border-color: rgba(255, 255, 255, 1);
+    }
+
+    @media all and (max-width:30em) {
+        a.button {
+            display: block;
+            margin: 0.2em auto;
+        }
+    }
+    </style>
+</head>
+
+<body>
+	<div class="player1">
+		<h3 id="player1score">00</h3>
+		<a href="#" class="button">100</a>
+		<a href="#" class="button">50</a>
+		<a href="#" class="button">25</a>
+		<a href="#" class="button">10</a>
+		<a href="#" class="button">5</a>
+		<a href="#" class="button">4</a>
+		<a href="#" class="button">3</a>
+		<a href="#" class="button">2</a>
+		<a href="#" class="button">1</a>
+	</div>
+
+	<a href="#" class="button reset">Reset</a>
+
+	<div class="player2">
+		<a href="#" class="button">1</a>
+		<a href="#" class="button">2</a>
+		<a href="#" class="button">3</a>
+		<a href="#" class="button">4</a>
+		<a href="#" class="button">5</a>
+		<a href="#" class="button">10</a>
+		<a href="#" class="button">25</a>
+		<a href="#" class="button">50</a>
+		<a href="#" class="button">100</a>		
+		<h3 id="player2score">00</h3>
+	</div>
+
+    <script src="GrooveBallScript2.js"></script>
+</body>
+
+</html>
