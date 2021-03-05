@@ -10,7 +10,7 @@ h1, h3 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.3rem;
 }
 
 a.button {
@@ -20,8 +20,8 @@ a.button {
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Baloo 2", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.55rem; /* reduces overall height of buttons */
+  font-size: 1.15rem;
+  line-height: 1.4rem; /* reduces overall height of buttons */
   text-align: center;
   transition: all 0.2s;
   width: 100%;
