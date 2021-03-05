@@ -23,37 +23,30 @@ for (var i = 0; i < buttons.length; i++) { // For each element with the button c
     buttons[i].addEventListener('click', function() { // Bind a click event that does this stuff
         event.preventDefault(); // Stop the browser default (so it doesn't jump to the top of the page)
 
-        var player = this.parentNode, // Fetch the clicked element's parent node (helps us figure out which player this is for)
-            scoreChange = parseInt(this.textContent); // Get the value of the clicked button and make it a number
+        var player = this.parentNode // Fetch the clicked element's parent node (helps us figure out which player this is for)
+        var scoreChange = parseInt(this.textContent) // Get the value of the clicked button and make it a number
+        var classes = this.classList // Get the list of classes used on this element
 
-        console.log(scoreChange); // Show us what score value has just been clicked
+        if (classes.contains("subtract")){ // If this element uses the 'subtract' class
+            var value = 'subtract' // set 'value' to 'subtract'
+        } else {
+            var value = scoreChange // Otherwise set it to the points value
+        }
 
         if (player.className === "player1") { // If the className of the clicked element's parent is player1
-            calculateScores(playerOneScores, scoreChange, playerOneTotalEl); // Run the calculateScores function using player 1's deets
+            calculateScores(playerOneScores, value, playerOneTotalEl); // Run the calculateScores function using player 1's deets     
         } else if (player.className === "player2") { //If the className of the clicked element's parent is player2
-            calculateScores(playerTwoScores, scoreChange, playerTwoTotalEl); // Run the calculateScores function using player 2's deets
-        } else {
+            calculateScores(playerTwoScores, value, playerTwoTotalEl); // Run the calculateScores function using player 1's deets     
+        } else if (classes.contains("reset")){
             if (confirm('Do you want to reset for a new game?')) { // Show a browser alert asking if you really want to do it
-                player1score.innerHTML = 0;
-                player2score.innerHTML = 0;
+                // Reset the scores and the score arrays
+                playerOneTotalEl.innerHTML = 0;
+                playerTwoTotalEl.innerHTML = 0;
+                playerOneScores = [];
+                playerTwoScores = [];
             } else { // If they cancel, don't do anything
                 console.log('Phew!');
             }
-        }
-    });
-}
-
-for (var i = 0; i < scores.length; i++) { // For each element with the score class
-    scores[i].addEventListener('click', function() { // Bind a click event that does this stuff
-        event.preventDefault(); // Stop the browser default (so it doesn't jump to the top of the page)
-        console.log("yep")
-
-        var player = this.parentNode; // Fetch the clicked element's parent node (helps us figure out which player this is for)
-
-        if (player.className === "player1") { // If the className of the clicked element's parent is player1
-            calculateScores(playerOneScores, 'subtract', playerOneTotalEl); // Run the calculateScores function using player 1's deets
-        } else if (player.className === "player2") { //If the className of the clicked element's parent is player2
-            calculateScores(playerTwoScores, 'subtract', playerTwoTotalEl); // Run the calculateScores function using player 2's deets
         }
     });
 }
