@@ -21,7 +21,7 @@ a.button {
   text-decoration: none;
   font-family: "Baloo 2", sans-serif;
   font-size: 1.2rem;
-  line-height: 1.6rem; /* reduces overall height of buttons */
+  line-height: 1.55rem; /* reduces overall height of buttons */
   text-align: center;
   transition: all 0.2s;
   width: 100%;
@@ -29,12 +29,20 @@ a.button {
 
 .player1 a.button {
   background-color: #faaf3a;
-  color: black;
+  color: #000000;
+}
+
+.player1 a.button:hover {
+  background-color: #fcc775;
 }
 
 .player2 a.button {
   background-color: #d3145a;
   color: #ffffff;
+}
+
+.player2 a.button:hover {
+  background-color: #e05b8c;
 }
 
 a.button.reset {
@@ -46,8 +54,8 @@ a.button.reset {
   margin: 0.5em 0;
 }
 
-a.button:hover {
-  border-color: rgba(255, 255, 255, 1);
+a.button.reset:hover {
+  background-color: #f3f3f3;
 }
 
 .columnlayout {
