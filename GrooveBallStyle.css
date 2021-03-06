@@ -1,147 +1,78 @@
 body {
-  background-color: rgb(255, 255, 255);
-  margin: 0;
-  padding: 0;
+  font-family: "Baloo 2", sans-serif;
 }
 
-#pagewrap {
-  width: 100%;
-  height: auto;
-  background-color: rgb(255, 255, 255);
-  margin: 0 auto;
-  /* padding: 0.5em 0.5em 3em 0.5em; */
-  max-width: 800px;
-}
-
-#flexwrapper {
-  width: 100%;
-  height: auto;
-  background-color: rgb(255, 255, 255);
-  display: flex; /*sets parent container to flex*/
-  align-items: center;
-  justify-content: space-around; /*sets spacing on horizontal axis*/
-  /* margin: 3em auto 0 auto; */
-}
-
-h1 {
-  font-family: "Baloo 2", cursive;
-  color: rgb(159, 0, 93);
-  font-size: 2em;
+h1, h3 {
+  font-size: 2rem;
   text-align: center;
-  /* border: solid 1px blue; */
+  margin: 0px;
+  cursor: pointer;
 }
 
 h3 {
-  font-family: "Baloo 2", cursive;
-  color: rgb(0, 0, 0);
-  font-size: 4em;
-  text-align: center;
-  /* border: solid 1px green; */
+  font-size: 2.3rem;
 }
 
-p {
-  font-family: helvetica;
-  color: rgb(0, 0, 0);
-  font-size: 1em;
+a.button {
+  display: inline-block;
+  margin: auto 0.1em 0.15em;
+  border-radius: 0.3em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.4rem; /* reduces overall height of buttons */
   text-align: center;
-  font-weight: 900;
-}
-
-.column1 {
+  transition: all 0.2s;
   width: 100%;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  text-align: center;
-  /* padding: 0.5em; */
-  margin: 0;
-  overflow: hidden;
 }
 
-.score {
+.player1 a.button {
+  background-color: #faaf3a;
+  color: #000000;
+}
+
+.player1 a.button:hover {
+  background-color: #fcc775;
+}
+
+.player2 a.button {
+  background-color: #d3145a;
+  color: #ffffff;
+}
+
+.player2 a.button:hover {
+  background-color: #e05b8c;
+}
+
+a.button.reset {
+  background-color: #e3e3e3;
+  color: #9f005d;
+  border-radius: 0.2em;
+  font-size: 1.5rem;
+  line-height: 3rem; /* adds height to this button only */
+  margin: 0.5em 0;
+}
+
+a.button.reset:hover {
+  background-color: #f3f3f3;
+}
+
+.columnlayout {
   width: 70%;
-  /* height: 3.5em; */
-  -webkit-border-radius: 0.1em;
-  -moz-border-radius: 0.1em;
-  -o-border-radius: 0.1em;
-  -ms-border-radius: 0.1em;
-  border-radius: 0.1em;
-  /* line-height: 2em; */
-  background-color: rgb(255, 255, 255);
-  text-align: center;
-  /* padding: 0 0.5em; */
-  margin: 0.5em auto;
-  /* overflow: hidden; */
-}
-
-.scorebox {
-  width: 70%;
-  /* height: 2em; */
-  -webkit-border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  -o-border-radius: 0.5em;
-  -ms-border-radius: 0.5em;
-  border-radius: 0.5em;
-  /* background-color: pink; */
-  text-align: center;
-  padding: 0;
+  max-width: 800px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
-.title {
-  width: 70%;
-  /* height: 4em; */
-  -webkit-border-radius: 0.1em;
-  -moz-border-radius: 0.1em;
-  -o-border-radius: 0.1em;
-  -ms-border-radius: 0.1em;
-  border-radius: 0.1em;
-  background-color: rgb(223, 223, 223);
-  /* text-align: center; */
-  /* padding: 0.5em; */
-  margin: 0 auto;
-  /* overflow: hidden; */
+div {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
-.player2 p {
-  color: rgb(255, 255, 255);
-}
-
-/*overflow: hidden; hides "content here" text as you squeeze down the window—set box heights to "auto" and remove overflow hidden as you add content*/
-
-footer {
-  width: 80%;
-  margin: 0 auto;
-  height: autoem;
-  background-color: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-footer span {
-  color: white;
-  margin: 0.75em auto 1.5em auto;
-  font-family: "Germania One";
-  font-size: 2em;
-}
-
-/*MEDIA QUERIES*/
-/* not yet tested on small screen devices - HW */
-
-@media only screen and (max-width: 800px) {
-  #flexwrapper {
+@media all and (max-width:30em) {
+  a.button {
     display: block;
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 1.5em;
-    padding-top: 0;
-  }
-
-  footer span {
-    font-size: 0.75em;
+    margin: 0.2em auto;
   }
 }
