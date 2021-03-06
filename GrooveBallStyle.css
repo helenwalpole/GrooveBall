@@ -13,6 +13,11 @@ h3 {
   font-size: 2.3rem;
 }
 
+.introLayout {
+  background-color: #c60048;
+  color: #FFFFFF;
+}
+
 a.button {
   display: inline-block;
   margin: auto 0.1em 0.15em;
@@ -21,15 +26,22 @@ a.button {
   text-decoration: none;
   font-family: "Baloo 2", sans-serif;
   font-size: 1.15rem;
-  line-height: 1.4rem; /* reduces overall height of buttons */
+  line-height: 1.4rem;
+  /* reduces overall height of buttons */
   text-align: center;
   transition: all 0.2s;
   width: 100%;
 }
 
-.player1 a.button {
+.player1 a.button, .intro a.button {
   background-color: #faaf3a;
   color: #000000;
+}
+
+.intro a.button {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 .player1 a.button:hover {
@@ -50,7 +62,8 @@ a.button.reset {
   color: #9f005d;
   border-radius: 0.2em;
   font-size: 1.5rem;
-  line-height: 3rem; /* adds height to this button only */
+  line-height: 3rem;
+  /* adds height to this button only */
   margin: 0.5em 0;
 }
 
@@ -64,10 +77,53 @@ a.button.reset:hover {
   margin: 0 auto;
 }
 
+input {
+  margin: auto 0.1em 0.2em;
+  font-size: 1.5rem;
+  font-family: "Baloo 2", sans-serif;
+  border-radius: 0.3em;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
 div {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+}
+
+#victory img {
+  position: fixed;
+  /* Sit on top of the page content */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  z-index: 3;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
+  object-fit: cover;
+}
+
+#mask {
+  position: fixed;
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media all and (max-width:30em) {
