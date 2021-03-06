@@ -11,6 +11,8 @@ var playerTwoTotalEl = document.getElementById("player2score") // Get the curren
 var playerOneScores = []
 var playerTwoScores = []
 var targetScore
+var custom = document.getElementById("custom")
+var customScore = document.getElementById("customScore")
 
 function sum(accumulator, currentValue) {
     return accumulator + currentValue;
@@ -59,6 +61,9 @@ function newGame(action) {
         playerTwoTotalEl.innerHTML = 0;
         playerOneScores = [];
         playerTwoScores = [];
+        custom.classList.add("hidden");
+        customScore.value = '';
+        console.log(customScore);
     }
 }
 
@@ -69,8 +74,7 @@ for (var i = 0; i < newGameButtons.length; i++) { // For each element with the b
         var classes = this.classList // Get the list of classes used on this element
 
         if (classes.contains("pick")) {
-            var customScore = document.getElementById("custom");
-            customScore.classList.remove("hidden");
+            custom.classList.remove("hidden");
         } else if (classes.contains("custom")) {
             targetScore = document.getElementById("customScore").value;
             console.log(targetScore);
