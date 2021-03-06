@@ -13,9 +13,19 @@ h3 {
   font-size: 2.3rem;
 }
 
+p {
+  text-align: center;
+}
+
 .introLayout {
-  background-color: #c60048;
+  background-color: #d3145a;
   color: #FFFFFF;
+}
+
+.columnlayout {
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 a.button {
@@ -33,12 +43,14 @@ a.button {
   width: 100%;
 }
 
-.player1 a.button, .intro a.button {
+.player1 a.button {
   background-color: #faaf3a;
   color: #000000;
 }
 
 .intro a.button {
+  background-color: #ffffff;
+  color: #000000;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -71,14 +83,10 @@ a.button.reset:hover {
   background-color: #f3f3f3;
 }
 
-.columnlayout {
-  width: 70%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 input {
-  margin: auto 0.1em 0.2em;
+  display: block;
+  margin: 0.2em auto;
+  background-color: #f6d0de;
   font-size: 1.5rem;
   font-family: "Baloo 2", sans-serif;
   border-radius: 0.3em;
